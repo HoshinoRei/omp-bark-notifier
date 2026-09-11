@@ -1,0 +1,35 @@
+{
+  "name": "omp-bark-notifier",
+  "version": "0.1.1",
+  "files": [
+    "hooks",
+    "src/config.ts",
+    "src/message.ts",
+    "src/notify.ts",
+    "src/types/agent-end-like-event.ts",
+    "src/types/bark-notifier-config.ts",
+    "src/types/bark-sender.ts",
+    "src/types/config-source.ts",
+    "src/types/file-layer-result.ts",
+    "src/types/hook-log-record.ts",
+    "src/types/load-result.ts",
+    "src/types/read-file-impl.ts",
+    "src/types/smoke-log-record.ts",
+    "src/types/task-notification.ts",
+    "src/types/task-status.ts"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@hoshinorei/bark-sdk": "https://npm.jsr.io/~/11/@jsr/hoshinorei__bark-sdk/0.8.0.tgz"
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-coding-agent": "latest",
+    "@types/bun": "^1.4.2"
+  },
+  "omp": {
+    "extensions": ["./hooks/post/bark-notifier.ts"]
+  }
+}
